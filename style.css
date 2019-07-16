@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.top {
+  width: 100%;
+  background-image: url(PhotobySTIL.jpg);
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.txt {
+  text-align: right;
+  color: #888;
+}
+.txt a {
+  color: #ff6c6c;
+}
+
+.txt h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+.wrap {
+  background-color: #fff;
+  width: 1200px;
+  text-align: center;
+  /* outline: 1px solid royalblue; */
+  margin: auto;
+  padding: 20px 0 80px 0;
+}
+h2 {
+  text-align: left;
+  color: #aaa;
+  margin: 50px 0 10px 0;
+}
+
+hr {
+  margin: 20px 0;
+  width: 60px;
+  height: 10px;
+  border: none;
+  text-align: left;
+  background-image: linear-gradient(
+    to right,
+    #3498db,
+    #3498db 14%,
+    #eee 14%,
+    #eee 28%,
+    #e74c3c 28%,
+    #e74c3c 42%,
+    #eee 42%,
+    #eee 56%,
+    #f1c40f 56%,
+    #f1c40f 70%,
+    #eee 70%,
+    #eee 84%,
+    #2ecc71 84%,
+    #2ecc71 98%,
+    #eee 98%,
+    #eee 100%
+  );
+}
+.area {
+  box-shadow: 0 0 1em #cccccc;
+  padding: 20px;
+}
+.area ul {
+  border-left: 5px solid seagreen;
+  line-height: 50px;
+}
+
+.area ul:hover {
+  background-color: #eee;
+}
+.area ul li {
+  display: inline-block;
+  /* outline: 1px solid seagreen; */
+}
+.area ul li:first-child {
+  text-align: left;
+  float: left;
+  margin-left: 10px;
+  width: 580px;
+  line-height: 50px;
+}
+.area ul li span {
+  display: inline-block;
+}
+
+.area ul li:first-child a {
+  text-align: left;
+  width: auto;
+  padding-right: 10px;
+  color: #24aa5c;
+  text-decoration-line: underline;
+}
+.area ul li:first-child a:hover {
+  background-color: #eee;
+}
+
+.area a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  font-size: 16px;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+}
+
+.area a:hover {
+  background-color: #aaa;
+  color: #333;
+  transition: 0.3s;
+}
+.area h3 {
+  text-align: left;
+  margin: 20px 0 10px 0;
+}
+
+.footer {
+  /* outline: 1px solid red; */
+  text-align: center;
+  height: 20px;
+  position: relative;
+  bottom: 10px;
+  color: #888;
+}
