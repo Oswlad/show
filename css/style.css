@@ -6,8 +6,8 @@
 
 .top {
   width: 100%;
-  background-image: url(top.jpg);
-  height: 250px;
+  background-image: url(../img/top.jpg);
+  height: 280px;
   background-size: cover;
   background-position: center;
 }
