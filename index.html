@@ -104,6 +104,38 @@
 			color: #fff;
 			text-align: center;
 		}
+
+
+
+
+		#box_inner {
+  animation: breathe 3s ease 1s infinite;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(36, 170, 55, 0.6);
+  border-radius: 50%;
+}
+#box_outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10rem;
+  width: 10rem;
+  background: #24AA37;
+  border-radius: 50%;
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+  }
+}
 	</style>
 	<body>
 		<div class="wrap">
@@ -119,6 +151,9 @@
 				</div>
 
 				<div class="info">
+					<div id="box_outer">
+  <div id="box_inner"><<img src="img/43.jpg" alt="">/div>
+</div>
 					<div class="infoPic"><img src="img/43.jpg" alt=""></div>
 					<h2>莊智涵 (Oswald)</h2>
 					<div class="tag">
