@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    .circleProcess {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      padding: 8px;
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+    .circleProcess,
+    .circleProcess__Content {
+      border-radius: 50%;
+    }
+    .circleProcess__Content {
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+      font-size: 0;
+      z-index: 2;
+    }
+    .circleProcess__Content:before {
+      content: '';
+      height: 100%;
+      width: 0px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: -1px;
+      padding: 0;
+      margin: 0;
+    }
+    .circleProcess__ContentBox {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .circleProcess__Content {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+    }
+    .circleProcess__Content h2 {
+      margin: 0;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 0.2em;
+    }
+    .circleProcess__Content small {
+      display: block;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 0.5em;
+    }
+    .circleProcess__Content p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .circleProcess__percent {
+      overflow: hidden;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .circleProcess__percent .halfCirlce {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform-origin: right center;
+      transform: rotateZ(-180deg);
+    }
+    .circleProcess .circleProcess__percent:nth-child(1) .halfCirlce {
+      transition: all 0.6s 0.6s linear;
+    }
+    .circleProcess .circleProcess__percent:nth-child(2) .halfCirlce {
+      transition: all 0.6s 0s linear;
+    }
+    .circleProcess .circleProcess__percent:nth-child(2) {
+      left: 50%;
+    }
+    .circleProcess .circleProcess__percent:nth-child(2) .halfCirlce {
+      transform-origin: left center;
+    }
+  </style>
+  <body>
+    <div class="Process">
+      <div class="circleProcess" data-percent="65">
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__Content">
+          <div class="circleProcess__ContentBox">
+            <h2>第一天</h2>
+            <small>0%</small>
+            <p>準備環境</p>
+          </div>
+        </div>
+      </div>
+      <div class="circleProcess" data-percent="100">
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__Content">
+          <div class="circleProcess__ContentBox">
+            <h2>第二天</h2>
+            <small>0%</small>
+            <p>建立與修改展示網站</p>
+          </div>
+        </div>
+      </div>
+      <div class="circleProcess" data-percent="45">
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__Content">
+          <div class="circleProcess__ContentBox">
+            <h2>第三天</h2>
+            <small>0%</small>
+            <p>建立更多內容</p>
+          </div>
+        </div>
+      </div>
+      <div class="circleProcess" data-percent="80">
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__Content">
+          <div class="circleProcess__ContentBox">
+            <h2>第四天</h2>
+            <small>0%</small>
+            <p>客製化外觀</p>
+          </div>
+        </div>
+      </div>
+      <div class="circleProcess" data-percent="30">
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__percent">
+          <div class="halfCirlce"></div>
+        </div>
+        <div class="circleProcess__Content">
+          <div class="circleProcess__ContentBox">
+            <h2>第五天</h2>
+            <small>0%</small>
+            <p>展望未來</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="build()">run</button>
+
+    <script>
+      var circles = document.querySelectorAll('.circleProcess');
+
+      build(circles);
+
+      function setDefault() {
+        circles.forEach(function(item) {
+          var circle_1 = item.children[1];
+          var circle_2 = item.children[0];
+          circle_1.children[0].style.transitionDuration = '0s';
+          circle_2.children[0].style.transitionDuration = '0s';
+          circle_1.children[0].style.transitionDelay = '0s';
+          circle_2.children[0].style.transitionDelay = '0s';
+          circle_1.children[0].style.transform = 'rotateZ(-180deg)';
+          circle_2.children[0].style.transform = 'rotateZ(-180deg)';
+          var percentBox = item.children[2].children[0].children[1];
+          percentBox.innerHTML = '0%';
+        });
+      }
+      function build() {
+        setDefault(circles);
+        setTimeout(function() {
+          circles.forEach(function(item) {
+            var percent = item.dataset.percent;
+            var circle_1 = item.children[1];
+            var circle_2 = item.children[0];
+            circle_1.children[0].removeAttribute('style');
+            circle_2.children[0].removeAttribute('style');
+            var percentBox = item.children[2].children[0].children[1];
+            percentBox.innerHTML = percent + '%';
+            if (percent > 50) {
+              if (percent == 100) {
+                circle_1.children[0].style.transform = 'rotateZ(0deg)';
+                circle_2.children[0].style.transform = 'rotateZ(0deg)';
+              } else {
+                circle_1.children[0].style.transform = 'rotateZ(0deg)';
+                var percentMore = percent - 50;
+                var deg = -180 + 360 * (percentMore / 100);
+                circle_2.children[0].style.transform =
+                  'rotateZ(' + deg + 'deg)';
+              }
+            } else {
+              var deg = -180 + 360 * (percent / 100);
+              circle_1.children[0].style.transform = 'rotateZ(' + deg + 'deg)';
+            }
+          });
+        }, 300);
+      }
+    </script>
+
+    <!-- https://jsbin.com/ruzunaf/edit?html,css,js,output -->
+  </body>
+</html>
