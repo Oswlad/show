@@ -1,198 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-      font-family: 'Montserrat';
-    }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			font-family: 'Montserrat';
+		}
 
-    .clearfixed {
-      clear: both;
-    }
+		.clearfixed {
+			clear: both;
+		}
 
-<<<<<<< HEAD
 		body {
-			background-color: #8f96a0;
-			/* background-image: url('https://images.unsplash.com/photo-1554521718-e87e96d67ca5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80'); */
-		
-			height:auto;
-			width:auto;
-			
+			/* background-color: #8f96a0; */
+			/* background-color: #ccc; */
+      background-image: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80');
+			width: 100%;
+			height: 100%;
 			font-size: 0px;
 		}
-=======
-    body {
-      background-color: #8f96a0;
-      width: 100%;
-      height: 100%;
-      font-size: 0px;
-    }
->>>>>>> 2dbe5c251f8a0cf1df48d98ffc08169e5860fcf7
 
-    .prof {
-      width: 800px;
-      height: 580px;
-      /* outline: 1px solid red; */
-      margin: auto;
-      margin-top: 120px;
-    }
+		.prof {
+			width: 800px;
+			height: 580px;
+			/* outline: 1px solid red; */
+			margin: auto;
+			margin-top: 120px;
+			box-shadow: 10px 5px 8px 10px #8f96a0;
+		}
 
-    .pic,
-    .info {
-      display: inline-block;
-      width: 45%;
-      font-size: 16px;
-      height: 100%;
-      top: 0px;
-      float: left;
-    }
+		.pic,
+		.info {
+			display: inline-block;
+			width: 45%;
+			font-size: 16px;
+			height: 100%;
+			top: 0px;
+			float: left;
+		}
 
-    .pic img {
-      height: 100%;
-      width: 100%;
-    }
+		.pic img {
+			height: 100%;
+			width: 100%;
+		}
 
-    .info {
-      background-color: #fff;
-      padding: 30px;
-      color: #465367;
-      width: 55%;
-    }
+		.info {
+			background-color: #fff;
+			padding: 30px;
+			color: #465367;
+			width: 55%;
+		}
 
-    .info h2 {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 30px;
-    }
-    .infoPic {
-      width: 150px;
-      height: 150px;
-      /* outline: 1px solid red; */
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 50%;
-    }
+		.info h2 {
+			text-align: center;
+			margin: 20px 0;
+			font-size: 30px;
+		}
+		.infoPic {
+			width: 150px;
+			height: 150px;
+			/* outline: 1px solid red; */
+			margin: 0 auto;
+			overflow: hidden;
+			border-radius: 50%;
+		}
 
-    .infoPic img {
-      width: 100%;
-    }
+		.infoPic img {
+			width: 100%;
+		}
+		.infoList {
+			list-style: none;
+			width: 100%;
+			text-align: center;
+			padding: 20px 0;
+		}
+		.tag {
+			height: 100px;
+			/* outline: 1px solid red; */
+		}
 
-    .tag {
-      height: 100px;
-      /* outline: 1px solid red; */
-    }
+		.tag div {
+			padding: 5px 10px;
+			margin-right: 20px;
+			display: inline-block;
+			background-color: #ccc;
+			transform: rotate(-5deg);
+			position: relative;
+			margin-bottom: 10px;
+		}
 
-    .tag div {
-      padding: 5px 10px;
-      margin-right: 20px;
-      display: inline-block;
-      background-color: #ccc;
-      transform: rotate(-5deg);
-      position: relative;
-    }
+		.tag div::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -15px;
+			border-bottom: 16px solid transparent;
+			border-left: 16px solid #ccc;
+			border-top: 16px solid transparent;
+		}
+		.link {
+			height: 20px;
+			color: #fff;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="prof">
+				<div class="pic">
+					<img
+						<!--src="https://images.unsplash.com/photo-1445052858312-134745f190f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a5595522ebe2992245a1d56d079a71d0"
+						<!--src="img/42.jpg"
+						src="https://images.unsplash.com/photo-1489963194992-fcd626d6532c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+						alt="user"
+						class="clip"
+					/>
+				</div>
 
-    .tag div::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -15px;
-      border-bottom: 16px solid transparent;
-      border-left: 16px solid #ccc;
-      border-top: 16px solid transparent;
-    }
-    .link {
-      height: 20px;
-      color: #fff;
-      text-align: center;
-    }
-
-    #box_inner {
-      animation: breathe 3s ease 1s infinite;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: rgba(36, 170, 55, 0.6);
-      border-radius: 50%;
-    }
-    #box_outer {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 10rem;
-      width: 10rem;
-      background: url('https://images.unsplash.com/photo-1563371474-6966ca5432c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
-      border-radius: 50%;
-    }
-    @keyframes breathe {
-      0% {
-        transform: scale(1, 1);
-      }
-      50% {
-        transform: scale(1.5, 1.5);
-      }
-      100% {
-        background: rgba(255, 255, 255, 0);
-      }
-    }
-  </style>
-  <body>
-    <div class="wrap">
-      <div class="prof">
-        <div class="pic">
-          <img
-            <!--src="https://images.unsplash.com/photo-1445052858312-134745f190f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a5595522ebe2992245a1d56d079a71d0"
-            <!--src="img/42.jpg"
-            src="https://images.unsplash.com/photo-1489963194992-fcd626d6532c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-            alt="user"
-            class="clip"
-          />
-        </div>
-
-<<<<<<< HEAD
 				<div class="info">
-					<div class="infoPic"><img src="img/42.jpg" alt=""></div>
-					<h2>莊智涵 (Oswald)</h2>
-					<div class="tag">
+					<div class="infoPic"><img src="img/42.jpg" alt="" /></div>
+					<h2>莊智涵 (CHI HAN)</h2>
+					<ul class="infoList">
+						<li>明新科技大學 資訊管理系</li>
+						<li>泓格科技 網站開發工程師(2014~至今)</li>
+						<li></li>
+					</ul>
+          
+					<div class="skill">
+					
+						<!-- <h2>skill</h2>
+            <div class="tag">
 						<div class="html">HTML</div>
 						<div class="css">CSS</div>
 						<div class="javascript">JavaScript</div>
-
-					</div>
-					<div class="skill">
-						<h2>sdfadfaf</h2>
+            <div class="seo">SEO</div> -->
 					</div>
 				</div>
-				<div class="clearfixed"></div>
 			</div>
+			<div class="clearfixed"></div>
 		</div>
 	</body>
-=======
-        <div class="info">
-          <div class="infoPic"><img src="img/43.jpg" alt="" /></div>
-          <div id="box_outer">
-            <div id="box_inner"></div>
-          </div>
-          <h2>莊智涵 (Oswald)</h2>
-          <div class="tag">
-            <div class="html">HTML</div>
-            <div class="css">CSS</div>
-            <div class="javascript">JavaScript</div>
-          </div>
-          <div class="skill">
-            <h2>sdfadfaf</h2>
-          </div>
-        </div>
-        <div class="clearfixed"></div>
-      </div>
-    </div>
-  </body>
->>>>>>> 2dbe5c251f8a0cf1df48d98ffc08169e5860fcf7
 </html>

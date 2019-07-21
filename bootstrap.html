@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>形象版形</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<style>
+			.btn {
+				border-width: 2px;
+			}
+
+			.form-control {
+				border-width: 2px;
+			}
+
+			.header-carusel-item {
+				height: 450px;
+			}
+
+			.bg-cover {
+				background-size: cover;
+				background-position: center center;
+			}
+
+			.carousel-caption {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+
+			@media (min-width: 768px) {
+				.text-md-dark {
+					color: #333;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bg-secondary py-1">
+			<div class="container text-right">
+				<a href="#" class="text-white">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="#" class="text-white">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">My Restaurant</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#"
+								>Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">心動了想訂位</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdownMenuLink"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								MENU
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">吃肉</a>
+								<a class="dropdown-item" href="#">不吃肉</a>
+								<a class="dropdown-item" href="#">吃雞</a>
+							</div>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<a
+							href="#"
+							class="btn btn-outline-primary mr-1"
+							data-toggle="modal"
+							data-target="#loginModal"
+							>登入</a
+						>
+						<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal"
+							>註冊</a
+						>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div
+						class="carousel-item header-carusel-item  bg-cover active"
+						style="background-image:url(https://images.unsplash.com/photo-1487004121828-9fa15a215a7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a07b117b05f357c47bbf6c731815119&auto=format&fit=crop&w=1050&q=80)"
+					>
+						<div class="carousel-caption d-none d-md-block px-3">
+							<h5>一個人，田野間的輕鬆美味</h5>
+							<p>
+								穿梭田野間。享受迷人稻田風光，當旅人走向一處又一處早已不是秘密的秘密景點少有行銷的小小村鎮反而清靜
+							</p>
+						</div>
+					</div>
+					<div
+						class="carousel-item header-carusel-item bg-cover"
+						style="background-image: url(https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91d35d2b5386e7dd13bd3b2538eab428&auto=format&fit=crop&w=1050&q=80)"
+					></div>
+					<div
+						class="carousel-item header-carusel-item bg-cover"
+						style="background-image: url(https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=86c8c1fd5e9e5b384696472a095c42ac&auto=format&fit=crop&w=1050&q=80)"
+					></div>
+				</div>
+				<a
+					class="carousel-control-prev"
+					href="#carouselExampleIndicators"
+					role="button"
+					data-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a
+					class="carousel-control-next"
+					href="#carouselExampleIndicators"
+					role="button"
+					data-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</header>
+		<section class="bg-info py-5 text-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div>
+							<i class="fas fa-utensils fa-5x"></i>
+						</div>
+						<h3>忘卻不了莓果香</h3>
+						<p>
+							調和天然莓果元素，不含香精與人工色素的純正原味，搭配北海道双層起司的濃郁口感，呈現酸甜融合的完美風味。
+						</p>
+					</div>
+					<div class="col-md-4">
+						<div>
+							<i class="fas fa-utensils fa-5x"></i>
+						</div>
+						<h3>忘卻不了莓果香</h3>
+						<p>
+							調和天然莓果元素，不含香精與人工色素的純正原味，搭配北海道双層起司的濃郁口感，呈現酸甜融合的完美風味。
+						</p>
+					</div>
+					<div class="col-md-4">
+						<div>
+							<i class="fas fa-utensils fa-5x"></i>
+						</div>
+						<h3>忘卻不了莓果香</h3>
+						<p>
+							調和天然莓果元素，不含香精與人工色素的純正原味，搭配北海道双層起司的濃郁口感，呈現酸甜融合的完美風味。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container-fluid py-5 bg-light text-white" style="position: relative">
+			<div class="row">
+				<div
+					class="col-md-5 bg-cover"
+					style="position: absolute; top:0;bottom:0;background-image:url(https://images.unsplash.com/photo-1481185103603-1dc844ef51db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66481a6d1211fd1e183f1085d01bf8a&auto=format&fit=crop&w=1053&q=80)"
+				></div>
+				<div class="container">
+					<div class="row justify-content-end text-md-dark">
+						<div class="col-md-7">
+							<h3>歡迎來到My Restaurant</h3>
+							<p>遇到這些灰色道德地炎時，要到兩三年後才會有比較清楚的感受</p>
+							<a href="" class="btn btn-outline-info">查看更多</a>
+							<div class="row mt-3">
+								<div class="col-md-6">
+									<h4>蘋果突發「春季」邀請函</h4>
+									<p>
+										蘋果今日（3/16）於台灣時間晚間 9 點無預警發出春季活動邀請函，並少見地選擇將在
+										3/27
+										於芝加哥一所高中舉辦發表會。由於邀請函以草寫字體書寫、並有「聽聽為教師、學生獻上的創新點子」字樣，活動內容預計將以教育領域為主軸。
+									</p>
+								</div>
+								<div class="col-md-6">
+									<h4>iPhone X「重新定義」？</h4>
+									<p>
+										知名雜誌《WIRED》認為，據 Google 在其新版作業系統「Android P」、以及 2018 年 MWC
+										展一系列新機的主要特色，今年 Android 用戶如果想買新手機，可能要有與蘋果 iPhone X
+										頻繁「撞機」的心理準備了。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-5">
+			<div class="container">
+				<h2 class="text-center my-3">如何這麼美味</h2>
+				<div class="row">
+					<div class="col-md-6 my-3">
+						<div class="d-flex">
+							<div class="mr-3">
+								<i class="text-info fas fa-football-ball fa-4x"></i>
+							</div>
+							<div>
+								<h3>Food</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rem hic
+									assumenda, aliquid quidem ex recusandae nihil iure saepe atque et, minus
+									temporibus, iusto sapiente numquam vitae enim quasi est?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 my-3">
+						<div class="d-flex">
+							<div class="mr-3">
+								<i class="text-info fas fa-table-tennis fa-4x"></i>
+							</div>
+							<div>
+								<h3>Lorem, ipsum dolor.</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. A quia nesciunt dolore
+									officia reiciendis facilis, sapiente non unde!.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="d-flex">
+							<div class="mr-3">
+								<i class="text-info fas fa-futbol fa-4x"></i>
+							</div>
+							<div>
+								<h3>Lorem, ipsum.</h3>
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea facilis
+									iste eius ipsam quam, suscipit nesciunt asperiores voluptatibus accusantium?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="d-flex">
+							<div class="mr-3">
+								<i class="text-info fas fa-volleyball-ball fa-4x"></i>
+							</div>
+							<div>
+								<h3>Lorem ipsum dolor sit amet.</h3>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repellat.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container-fluid bg-light py-5 text-white" style="position: relative">
+				<div class="row">
+					<div
+						class="col-md-5 bg-cover"
+						style="position: absolute; top: 0; bottom: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1498309313100-e308c8946b45?dpr=2&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=)"
+					></div>
+				</div>
+				<div class="container text-md-dark">
+					<div class="col-md-7 my-4">
+						<h3>讓快樂持續發生</h3>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum quis quibusdam nihil
+							minima voluptatum provident.
+						</p>
+						<dl class="row">
+							<dt class="col-sm-3">不吃飽哪有力氣減肥啊?</dt>
+							<dd class="col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</dd>
+
+							<dt class="col-sm-3">Euismod</dt>
+							<dd class="col-sm-9">
+								<p>
+									Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+								</p>
+								<p>Donec id elit non mi porta gravida at eget metus.</p>
+							</dd>
+
+							<dt class="col-sm-3">我再來歐洲你已經走</dt>
+							<dd class="col-sm-9">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus quas, iusto
+								adipisci voluptate veritatis suscipit recusandae mollitia repellendus odit facilis
+								quasi eos. Minima, neque possimus officiis provident nam nobis?
+							</dd>
+
+							<dt class="col-sm-3 text-truncate">假如你單是站著...</dt>
+							<dd class="col-sm-9">
+								Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+								fermentum massa justo sit amet risus.
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9897816337148!2d120.98847611478367!3d24.864198584052108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683154faa8283b%3A0x92cb1c5564a574ef!2z5piO5paw56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1521890864515"
+							width="100%"
+							height="450"
+							frameborder="0"
+							style="border:0"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div class="col-md-6">
+						<form action="" class="needs-validation" novalidate>
+							<div class="form-group">
+								<label for="username">姓名*</label>
+								<input
+									type="text"
+									class="form-control"
+									id="username"
+									placeholder="請輸入姓名"
+									required
+								/>
+								<div class="invalid-feedback">
+									Please enter username.
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="phone">電話*</label>
+								<input
+									type="tel"
+									class="form-control"
+									id="phone"
+									placeholder="請輸入電話"
+									required
+								/>
+								<div class="invalid-feedback">
+									Please enter phonenumber.
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email">E-mail*</label>
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									placeholder="請輸入E-mail"
+									required
+								/>
+								<div class="invalid-feedback">
+									Please enter E-mail.
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="people">人數*</label>
+								<input
+									type="number"
+									class="form-control"
+									id="people"
+									placeholder="請輸入人數"
+									required
+								/>
+								<div class="invalid-feedback">
+									請輸入到訪人數.
+								</div>
+							</div>
+							<div class="custom-controls-stacked">
+								<div class="custom-control custom-radio" required>
+									<input
+										type="radio"
+										id="customRadio1"
+										name="customRadio"
+										class="custom-control-input"
+									/>
+									<label class="custom-control-label" for="customRadio1">我吃素唷</label>
+								</div>
+								<div class="custom-control custom-radio">
+									<input
+										type="radio"
+										id="customRadio2"
+										name="customRadio"
+										class="custom-control-input"
+									/>
+									<label class="custom-control-label" for="customRadio2">我可以吃肉</label>
+								</div>
+							</div>
+							<div class="text-right">
+								<button type="button" class="btn btn-secondary">取消</button>
+								<button type="submit" class="btn btn-primary">送出</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container-fluid">
+			<div class="row">
+				<div
+					class="col-md-6 bg-cover p-5 text-white"
+					style="background-image:url(https://images.unsplash.com/photo-1499530403357-0ea994f8655a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f083817a19c70e1266194f8cbd8fa99e&auto=format&fit=crop&w=750&q=80)"
+				>
+					<div class="row">
+						<div class="col-md-9">
+							<small>加入我們</small>
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ipsam soluta itaque
+								impedit assumenda? Quaerat nobis ut eius ea necessitatibus?
+							</p>
+							<a href="#" class="btn btn-outline-warning">加入我們</a>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-md-6 p-5 text-white bg-cover"
+					style="background-image: url(https://images.unsplash.com/photo-1481798699994-481e7c0a8282?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4c02fb2ca219a8fffb55f292aa483861&auto=format&fit=crop&w=750&q=80)"
+				>
+					<div class="row">
+						<div class="col-md-9">
+							<small>品嚐佳餚</small>
+							<h3>Lorem ipsum dolor sit amet consectetur.</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos architecto neque, qui
+								maxime voluptatem temporibus quo. Odit tempore numquam iste, id repellat ad
+								reprehenderit nisi porro molestiae, eveniet modi beatae!
+							</p>
+							<a href="#" class="btn btn-outline-warning">品嚐佳餚</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="text-secondary py-3 text-center">
+				© Copright 2017 My Restaurant
+				<a href="#"> Facebook </a>
+				<a href="#"> GitHub </a>
+			</div>
+		</footer>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="loginModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-primary text-white">
+						<h5 class="modal-title" id="exampleModalLabel">登入</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div class="form-group">
+								<label for="login_email">E-mail</label>
+								<input
+									type="text"
+									class="form-control"
+									id="login_email"
+									placeholder="Enter E-mail"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input
+									type="text"
+									class="form-control"
+									id="password"
+									placeholder="Enter password"
+								/>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" id="remember" />
+								<label for="remember">記住我</label>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<a
+							href="#"
+							class="mr-auto"
+							data-dismiss="modal"
+							data-toggle="modal"
+							data-target="#registerModal"
+							>切換到註冊</a
+						>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">登入</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="registerModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-warning text-white">
+						<h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row pb-2">
+							<div class="col-md-6 text-secondary">
+								<h2 class="font-weight-bold">註冊My Restaurant</h2>
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et laborum,
+									necessitatibus aliquid velit non dolorem iure commodi quaerat magni repudiandae
+									possimus, excepturi beatae doloremque expedita, harum voluptatibus. Commodi
+									mollitia molestiae voluptas dolor.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam, ad dolores
+									doloremque sit sunt odit tempore repellat aut veniam fugiat vero nihil quaerat
+									eos, deserunt corrupti laboriosam commodi mollitia odio magni voluptate ut quos,
+									labore minima. Itaque consequatur labore esse necessitatibus aliquid ipsa
+								</p>
+							</div>
+							<div class="col-md-6">
+								<form action="">
+									<div class="form-group">
+										<label for="login_email">E-mail</label>
+										<input
+											type="text"
+											class="form-control"
+											id="login_email"
+											placeholder="Enter E-mail"
+										/>
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input
+											type="password"
+											class="form-control"
+											id="password"
+											placeholder="Enter Password"
+										/>
+									</div>
+									<div class="form-group">
+										<label for="check_password">Check Password</label>
+										<input
+											type="password"
+											class="form-control"
+											placeholder="Enter Password again"
+										/>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" id="agree" />
+										<label for="agree">同意條款</label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a
+							class="mr-auto"
+							href="#"
+							data-dismiss="modal"
+							data-toggle="modal"
+							data-target="#loginModal"
+							>我有帳號了？</a
+						>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function() {
+				'use strict';
+				window.addEventListener(
+					'load',
+					function() {
+						// Fetch all the forms we want to apply custom Bootstrap validation styles to
+						var forms = document.getElementsByClassName('needs-validation');
+						// Loop over them and prevent submission
+						var validation = Array.prototype.filter.call(forms, function(form) {
+							form.addEventListener(
+								'submit',
+								function(event) {
+									if (form.checkValidity() === false) {
+										event.preventDefault();
+										event.stopPropagation();
+									}
+									form.classList.add('was-validated');
+								},
+								false,
+							);
+						});
+					},
+					false,
+				);
+			})();
+
+			$(document).ready(function() {
+				console.log('ready'); //step1 check jquery is run
+				$('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function() {
+					console.log('click'); //step2 check 是否有正確選到登入modal的切換到註冊button
+					var target = $(this).data('target');
+					console.log('target', target);
+					$(target).on('shown.bs.modal', function() {
+						$('body').addClass('modal-open');
+					});
+				});
+				//<a href = "#" class="mr-auto" data - dismiss="modal" data - toggle="modal" data - target="#registerModal" > 切換到註冊</a >
+			});
+		</script>
+	</body>
+</html>

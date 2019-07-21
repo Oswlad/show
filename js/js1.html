@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array search</title>
+</head>
+<style>
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
+    background-image: url("https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80");
+    background-size: cover;
+    background-position: 50% 0%;
+}
+.mid{
+    width: 500px;
+    margin-top:100px;
+}
+
+.mid > p{
+    color: rgb(46, 46, 46);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.mid > p > a{
+    color: rgb(46, 46, 46);
+    font-weight: bold;
+}
+.seach{
+    width: 100%;
+    height: 40px;
+    border-radius:10px;
+    padding-left: 10px;
+    border:none;
+}
+.seach_list{
+    width: 100%;
+}
+.seach_list > .item{
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 30px 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.seach_list > .item > a{
+    display: block;
+}
+.seach_list > .item > a.title{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+.seach_list > .item > a.link{
+    font-size: 12px;
+    color: cornflowerblue;
+}
+.seach_list > .item > a:hover{
+    color: rgb(40, 102, 218);
+}
+.seach_list > .item > p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#btn{
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 3px 5px #000;
+    background-color: #fff;
+    font-size: 20px;
+    outline: none;
+}
+</style>
+<body>
+     <div class="mid">
+        <input class="seach" type="text" value="天氣">
+        <p>最近熱門搜尋:  
+            <a class="tag" href="javascript:;" target="_blank">天氣</a>、
+            <a class="tag" href="javascript:;" target="_blank">科技</a>、
+            <a class="tag" href="javascript:;" target="_blank">運動</a>、
+            <a class="tag" href="javascript:;" target="_blank">合作陣線</a>
+        </p>
+        <div class="seach_list">
+            <!-- <div class="item">
+                <a href="javascript:;" target="_blank" class="title">台灣媽祖信仰- 维基百科，自由的百科全书</a>
+                <a href="javascript:;" target="_blank" class="link">https://zh.wikipedia.org/zh-tw/台灣媽祖信仰</a>
+                <p>媽祖信仰是臺灣普遍民間信仰。早期移民多自華南渡海，心驚膽顫，且台灣四面環海，海上活動頻繁，海神媽祖婆成臺灣人重要精神託付。臺灣有媽祖廟510座以上，有 ...</p>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+<script>
+      var seachData = {
+            "天氣":[
+                {
+                    title: '梅雨季要結束了！鋒面影響到這天 台灣將正式入夏',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '受到鋒面影響，今天(23日)晚上全台都有雨，尤其中彰地區須慎防大雷雨，根據各家天氣預報，這波鋒面預計影響到周二(25日)，是今年梅雨季的最後一道鋒面，也就是從周三(26日)開始，台灣天氣將正式進入夏天型態，高溫飆至34°C，午後會有局部雷陣雨發生，且因為偏南風，整體感覺悶熱。',
+                },
+                {
+                    title: '晚上天氣轉不穩！明天梅雨鋒面接近全台有雨',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '[新頭殼newtalk] 今（22）日白天受西南風影響，台灣各地及澎湖大多為多雲到晴的天氣，中央氣象局表示，明（23）天起受鋒面影響，天氣不穩定， 天氣專家吳德榮也表示，今年「梅雨季」第6道鋒面抵達，各地轉有陣雨、雷雨，中部以北受影響較大，「大氣不穩定度」大幅提高。',
+                },
+              {
+               title:'梅雨鋒面來襲 嚴防劇烈天氣',
+                link:'https://tw.news.yahoo.com',
+                text:'中央氣象局表示，今天受到鋒面影響，天氣不穩定，中部以北雨勢明顯且持續，尤其當對流發展旺盛影響時，容易出現短時強降雨並伴隨雷擊、強陣風等現象，而東北部及南部也會有短暫的陣雨或雷雨，至於花東地區的降雨則較為局部，西半部地區並有局部大雨發生的機率。氣象專家吳德榮指出，梅雨鋒面有「中、小尺度對流系統」發展，伴隨雷擊、強風、瞬間強降雨等「劇烈天氣」，週二至週六鋒面減弱、北移，天氣逐漸好轉。'
+                }
+            ],
+            "科技":[
+                {
+                    title: '瀏覽器版 Netflix 也終於在測試畫中畫播放',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '雖說現在的系統、瀏覽器和影片網站都有支援原生的畫中畫播放，不過 Netflix 卻因為版權的問題，一直都沒有開放他們瀏覽器版本的播放器有這功能。最近就有部分使用者發現他們的播放器發現到這畫中畫功能，啟動之後就會有個可調尺寸和位置的彈出式小播放器，然而沒有支援字幕顯示。',
+                },{
+                  title:'機器人沖泡咖啡是甚麼味道？現在已經有了答案',
+                  link:'https://tw.news.yahoo.com',
+                  text:'當科技遇上美食，究竟會激盪出甚麼樣的味道？這個問題，已經有了答案。台南市出現了第一家機器人咖啡販賣機，勵德企業開發出的智慧機器人可以現磨、現泡出不同口味的咖啡，還能主動拉花增添了咖啡的風情。'
+                }
+            ],
+            "運動":[
+                {
+                    title: 'MLB／柳賢振3度挑戰10勝失利 道奇再見轟勝落磯',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '大聯盟的戰況，道奇隊韓籍左投柳賢振，今天（23日）在主場迎戰落磯隊，第三度挑戰本季第10勝，他先發6局失掉3分，但只有1分是自責分，退場時雙方3:3，柳賢振無關勝敗，再次與10勝擦肩而過，最後道奇在延長賽11局下半，靠著佛度戈的再見全壘打，終場5:4險勝。 ',
+                },
+                {
+                    title: '旅行者錦標賽 潘政琮3輪打完並列51名',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '（中央社記者龍柏安台北23日電）台灣旅美高球好手潘政琮今天在美國職業高爾夫巡迴賽（PGA）旅行者錦標賽，第3回合繳出高於標準1桿的71桿，總計以低於標準2桿的208桿，暫時並列51名。',
+                }
+            ],
+            "合作陣線":[
+                {
+                    title: '美國急診「夾魚刺」：8小時半的就診時間與天價帳單',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '上次回美國的時候，我在飛機上吃了海鮮起司燉飯，在睡夢中被叫醒吃東西時我整個很不清醒地胡亂咀嚼，吃到一半忽然發現有個東西卡在喉嚨。我在飛機上瘋狂喝水、祈禱「那個東西」自己掉下去...',
+                },
+                {
+                    title: '佳作總在失敗和不斷學習以後遇見－從相機轉彎到有機的林益照',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '當溫室栽植瓜果漸漸順手，林益照挑戰露天有機蔬菜的念頭緊接而來。',
+                },
+                {
+                    title: '這款遊戲竟能造福人類 玩家設計成品有機會變疫苗',
+                    link: 'https://tw.news.yahoo.com',
+                    text: '近日，1支研究團隊將他們的專業知識編碼成了1款名為「Foldit」的電腦遊戲，使每個普通人都可能成為成功設計全新人造蛋白質的「科學家」。',
+                }
+            ]
+        }
+
+       
+
+        var seach = document.getElementsByClassName('seach')[0];
+        var seach_list = document.getElementsByClassName('seach_list')[0];
+        var tag = document.getElementsByClassName('tag');
+        var seachArr = seachData['天氣'];
+        var html = '';
+
+
+        for(var s = 0; s < tag.length; s++){
+            tag[s].addEventListener('click', seachTag);
+        }
+
+        function DOMrender(){
+            html = '';
+            seach_list.innerHTML = '';
+            for(var i = 0; i < seachArr.length; i++){
+                html += '<div class="item">'
+                html += '<a href="javascript:;" target="_blank" class="title">'+seachArr[i].title+'</a>'
+                html += '<a href="'+seachArr[i].link+'" target="_blank" class="link">'+seachArr[i].link+'</a>'
+                html += '<p>'+seachArr[i].text+'</p>'
+                html += '</div>'
+            }
+            seach_list.innerHTML = html;
+        }
+
+        function seachTag(){
+            seachArr = seachData[this.innerText];
+            seach.value = this.innerText;
+            DOMrender();
+        }
+
+        seach.addEventListener('keyup', function(){
+            seachArr = seachData[this.value];
+            if(seachArr === undefined){
+                seachArr = [];
+            }
+            
+            DOMrender();
+        })
+
+
+        DOMrender();
+</script>
+</html>
