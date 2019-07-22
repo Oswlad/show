@@ -1,136 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
-	</head>
-	<style>
-		* {
-			margin: 0px;
-			padding: 0px;
-			box-sizing: border-box;
-			background-color: #3f3f3f;
-		}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: #3f3f3f;
+    }
 
-		.wrap {
-			width: 960px;
-			margin: 0 auto;
-		}
-		.top {
-			padding: 20px 10px;
-			/* outline: 1px solid red; */
-			text-align: center;
-		}
+    .wrap {
+      width: 960px;
+      margin: 0 auto;
+    }
+    .top {
+      padding: 20px 10px;
+      /* outline: 1px solid red; */
+      text-align: center;
+    }
 
-		.top span {
-			text-align: right;
-			display: block;
-			color: #eee;
-		}
-		.top .item {
-			text-align: center;
-			line-height: 100px;
-			font-size: 18px;
-			border: 1px solid #eee;
-			border-radius: 50%/60% 40% 60% 40%;
-			position: relative;
-			color: #ccc;
-			width: 100px;
-			height: 100px;
-			margin: 0 5px;
-			display: inline-block;
-		}
+    .top span {
+      text-align: right;
+      display: block;
+      color: #eee;
+    }
+    .top .item {
+      text-align: center;
+      line-height: 100px;
+      font-size: 18px;
+      border: 1px solid #eee;
+      border-radius: 50%/60% 40% 60% 40%;
+      position: relative;
+      color: #ccc;
+      width: 100px;
+      height: 100px;
+      margin: 0 5px;
+      display: inline-block;
+    }
 
-		.top .item::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100px;
-			height: 100px;
-			border: 1px solid #eee;
-			border-radius: 50%/60% 70% 40% 30%;
-			animation: loading 1.5s infinite linear;
-		}
+    .top .item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #eee;
+      border-radius: 50%/60% 70% 40% 30%;
+      animation: loading 1.5s infinite linear;
+    }
 
-		.top .item::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100px;
-			height: 100px;
-			border: 1px solid #eee;
-			border-radius: 50%/30% 80% 20% 70%;
-			animation: loading1 4s infinite linear;
-		}
+    .top .item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #eee;
+      border-radius: 50%/30% 80% 20% 70%;
+      animation: loading1 4s infinite linear;
+    }
 
-		@keyframes loading {
-			from {
-				transform: rotate(0deg);
-			}
-			to {
-				transform: rotate(360deg);
-			}
-		}
+    @keyframes loading {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-		@keyframes loading1 {
-			from {
-				transform: rotate(360deg);
-			}
-			to {
-				transform: rotate(0deg);
-			}
-		}
-	</style>
+    @keyframes loading1 {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
 
-	<body>
-		<div class="wrap">
-			<div class="top">
-				<div class="item">HTML</div>
-				<div class="item">CSS</div>
-				<div class="item">JavaScript</div>
-				<div class="item">Bootstrap</div>
-				<span>Update : 2019 July</span>
-			</div>
-			<hr />
-			<style>
-				.card {
-					text-align: center;
-					/* outline: 1px solid green; */
-				}
-				.card_item {
-					width: 250px;
-					height: 180px;
-                    margin-top:10px;
-					/* border: 1px solid #eee; */
-					border-radius: 10px;
-                    padding:8px;
-                    display:inline-block;
-                    float:left;
-				}
-				.card_item img {
-					max-width: 250px;
-					height: 100%;
-                    border-radius: 5px;
-				}
-                .clearfixed{
-                    clear: both;
-                }
-			</style>
-			<div class="card">
-				<div class="card_item">
-					<img src="img/jsvascript.png" alt="" />
-					<hr />
-                </div>
-                <div class="card_item">
-					<img src="img/htmlCss.png" alt="" />
-					<hr />
-                </div>
-                <div class="clearfixed"></div>
-			</div>
-		</div>
-	</body>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="item">HTML</div>
+        <div class="item">CSS</div>
+        <div class="item">JavaScript</div>
+        <div class="item">Bootstrap</div>
+        <span>Update : 2019 July</span>
+      </div>
+      <hr />
+      <style>
+        .card {
+          text-align: center;
+          /* outline: 1px solid green; */
+        }
+        .card_item {
+          width: 180px;
+          height: 100px;
+          margin-top: 10px;
+          /* border: 1px solid #eee; */
+          border-radius: 10px;
+          padding: 8px;
+          display: inline-block;
+          float: left;
+        }
+        .card_item img {
+          max-width: 250px;
+          height: 100%;
+          border-radius: 5px;
+        }
+        .clearfixed {
+          clear: both;
+        }
+      </style>
+      <div class="card">
+        <div class="card_item">
+          <img
+            src="https://www.webmart.tw/wp-content/uploads/2016/12/Templating-Engines-for-JavaScript.png"
+            alt=""
+          />
+          <hr />
+        </div>
+        <div class="card_item">
+          <img src="img/htmlCss.png" alt="" />
+          <hr />
+        </div>
+        <div class="clearfixed"></div>
+      </div>
+    </div>
+  </body>
 </html>
