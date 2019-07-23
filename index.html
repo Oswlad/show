@@ -1,150 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
-	</head>
-	<style>
-		* {
-			margin: 0px;
-			padding: 0px;
-			box-sizing: border-box;
-			font-family: 'Montserrat';
-		}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bacc61c073.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Montserrat';
+    }
 
-		.clearfixed {
-			clear: both;
-		}
+    .clearfixed {
+      clear: both;
+    }
 
-		body {
-			/* background-color: #8f96a0; */
-			/* background-color: #ccc; */
+    body {
+      /* background-color: #8f96a0; */
+      /* background-color: #ccc; */
       background-image: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80');
-			width: 100%;
-			height: 100%;
-			font-size: 0px;
-		}
+      width: 100%;
+      height: 100%;
+      font-size: 0px;
+    }
 
-		.prof {
-			width: 800px;
-			height: 580px;
-			/* outline: 1px solid red; */
-			margin: auto;
-			margin-top: 120px;
-			box-shadow: 10px 5px 8px 10px #8f96a0;
-		}
+    .prof {
+      width: 800px;
+      height: 580px;
+      /* outline: 1px solid red; */
+      margin: auto;
+      margin-top: 120px;
+      box-shadow: 10px 5px 8px 10px #8f96a0;
+    }
 
-		.pic,
-		.info {
-			display: inline-block;
-			width: 45%;
-			font-size: 16px;
-			height: 100%;
-			top: 0px;
-			float: left;
-		}
+    .pic,
+    .info {
+      display: inline-block;
+      width: 45%;
+      font-size: 16px;
+      height: 100%;
+      top: 0px;
+      float: left;
+    }
 
-		.pic img {
-			height: 100%;
-			width: 100%;
-		}
+    .pic img {
+      height: 100%;
+      width: 100%;
+    }
 
-		.info {
-			background-color: #fff;
-			padding: 30px;
-			color: #465367;
-			width: 55%;
-		}
+    .info {
+      background-color: #fff;
+      padding: 30px;
+      color: #465367;
+      width: 55%;
+    }
 
-		.info h2 {
-			text-align: center;
-			margin: 20px 0;
-			font-size: 30px;
-		}
-		.infoPic {
-			width: 150px;
-			height: 150px;
-			/* outline: 1px solid red; */
-			margin: 0 auto;
-			overflow: hidden;
-			border-radius: 50%;
-		}
+    .info h2 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 30px;
+    }
+    .infoPic {
+      width: 150px;
+      height: 150px;
+      /* outline: 1px solid red; */
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 50%;
+    }
 
-		.infoPic img {
-			width: 100%;
-		}
-		.infoList {
-			list-style: none;
-			width: 100%;
-			text-align: center;
-			padding: 20px 0;
-		}
-		.tag {
-			height: 100px;
-			/* outline: 1px solid red; */
-		}
+    .infoPic img {
+      width: 100%;
+    }
+    .infoList {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .tag {
+      height: 100px;
+      /* outline: 1px solid red; */
+    }
 
-		.tag div {
-			padding: 5px 10px;
-			margin-right: 20px;
-			display: inline-block;
-			background-color: #ccc;
-			transform: rotate(-5deg);
-			position: relative;
-			margin-bottom: 10px;
-		}
+    .tag div {
+      padding: 5px 10px;
+      margin-right: 20px;
+      display: inline-block;
+      background-color: #ccc;
+      transform: rotate(-5deg);
+      position: relative;
+      margin-bottom: 10px;
+    }
 
-		.tag div::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: -15px;
-			border-bottom: 16px solid transparent;
-			border-left: 16px solid #ccc;
-			border-top: 16px solid transparent;
-		}
-		.link {
-			height: 20px;
-			color: #fff;
-			text-align: center;
-		}
-	</style>
-	<body>
-		<div class="wrap">
-			<div class="prof">
-				<div class="pic">
-					<img
-						<!--src="https://images.unsplash.com/photo-1445052858312-134745f190f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a5595522ebe2992245a1d56d079a71d0"
-						<!--src="img/42.jpg"
-						src="https://images.unsplash.com/photo-1489963194992-fcd626d6532c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-						alt="user"
-						class="clip"
-					/>
-				</div>
+    .tag div::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -15px;
+      border-bottom: 16px solid transparent;
+      border-left: 16px solid #ccc;
+      border-top: 16px solid transparent;
+    }
+    .link {
+      height: 20px;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="prof">
+        <div class="pic">
+          <img
+            <!--src="https://images.unsplash.com/photo-1445052858312-134745f190f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a5595522ebe2992245a1d56d079a71d0"
+            <!--src="img/42.jpg"
+            src="https://images.unsplash.com/photo-1489963194992-fcd626d6532c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+            alt="user"
+            class="clip"
+          />
+        </div>
 
-				<div class="info">
-					<div class="infoPic"><img src="img/42.jpg" alt="" /></div>
-					<h2>莊智涵 (CHI HAN)</h2>
-					<ul class="infoList">
-						<li>明新科技大學 資訊管理系</li>
-						<li>泓格科技 網站開發工程師(2014~至今)</li>
-						<li></li>
-					</ul>
-          
-					<div class="skill">
-					
-						<!-- <h2>skill</h2>
+        <div class="info">
+          <div class="infoPic"><img src="img/42.jpg" alt="" /></div>
+          <h2>莊智涵 (CHI HAN)</h2>
+          <ul class="infoList">
+            <li>明新科技大學 資訊管理系</li>
+            <li>泓格科技 網站開發工程師(2014~至今)</li>
+            <li></li>
+          </ul>
+          <style>
+            .fab,
+            .fas {
+              font-size: 30px;
+              margin: 8px 10px;
+            }
+
+            .skill li {
+              list-style: none;
+              display: inline-block;
+              /* border-right: 1px solid orange; */
+            }
+          </style>
+          <div class="skill">
+            <ul>
+              <li><i class="fab fa-html5" style="color:#ea6228"></i>HTML 5</li>
+              <li>
+                <i class="fab fa-css3-alt" style="color:#146fb1"></i>CSS CSS3
+              </li>
+              <li>
+                <i class="fab fa-js-square" style="color:#f9d448"></i>JavaScript
+              </li>
+              <li><i class="fab fa-php" style="color:#7478ae"></i>PHP</li>
+              <li><i class="fas fa-database" style="color:#e43129"></i>SQL</li>
+              <li><i class="fas fa-database"></i>mySQL</li>
+              <li><i class="fab fa-github"></i>github</li>
+              <li>
+                <i class="fab fa-bootstrap" style="color:#6d42a0"></i>Bootstrap
+              </li>
+            </ul>
+
+            <!-- <h2>skill</h2>
             <div class="tag">
 						<div class="html">HTML</div>
 						<div class="css">CSS</div>
 						<div class="javascript">JavaScript</div>
             <div class="seo">SEO</div> -->
-					</div>
-				</div>
-			</div>
-			<div class="clearfixed"></div>
-		</div>
-	</body>
+          </div>
+        </div>
+      </div>
+      <div class="clearfixed"></div>
+    </div>
+  </body>
 </html>
