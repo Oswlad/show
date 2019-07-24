@@ -4,13 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>形象版形</title>
+		<title>My Restaurant</title>
 		<link
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
+		<script src="https://kit.fontawesome.com/bacc61c073.js"></script>
 		<style>
 			.btn {
 				border-width: 2px;
@@ -33,6 +34,26 @@
 				background-color: rgba(0, 0, 0, 0.6);
 			}
 
+			.navbar-brand {
+				border: 1px solid #888;
+				border-radius: 5px;
+				padding: 5px;
+			}
+			.text-center a {
+				text-decoration: none;
+			}
+			.fab {
+				font-size: 28px;
+			}
+
+			.icon a {
+				text-decoration:none;
+			}
+			.icon i {
+				margin:2px 5px;
+				font-size:26px;
+			}
+
 			@media (min-width: 768px) {
 				.text-md-dark {
 					color: #333;
@@ -42,8 +63,15 @@
 	</head>
 
 	<body>
-		<div class="bg-secondary py-1">
-			<div class="container text-right">
+		<div class="bg-secondary">
+			<div class="container text-right icon">
+				<a href="index.html" class="text-white">
+					<i class="fas fa-home"></i>
+				</a>
+
+				<a href="index.html" class="text-white">
+					<i class="fab fa-github"></i>
+				</a>
 				<a href="#" class="text-white">
 					<i class="fab fa-instagram"></i>
 				</a>
@@ -473,8 +501,8 @@
 		<footer>
 			<div class="text-secondary py-3 text-center">
 				© Copright 2017 My Restaurant
-				<a href="#"> Facebook </a>
-				<a href="#"> GitHub </a>
+				<a href="#"><i class="fab fa-facebook" style="color:#4057a8"></i></a>
+				<a href="index.html"><i class="fab fa-github" style="color:#712b8b"></i></a>
 			</div>
 		</footer>
 
