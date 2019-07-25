@@ -10,7 +10,8 @@ a {
   color: rgb(61, 146, 201);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
@@ -40,7 +41,8 @@ h3 {
   color: #fff;
 }
 
-.brand-title, .brand-tagline {
+.brand-title,
+.brand-tagline {
   margin: 0;
 }
 
@@ -82,7 +84,8 @@ h3 {
   font-size: 85%;
 }
 
-.nav-item a:hover, .nav-item a:focus {
+.nav-item a:hover,
+.nav-item a:focus {
   border: 2px solid rgb(61, 146, 201);
   text-decoration: none;
 }
@@ -152,6 +155,7 @@ h3 {
 
 .post-category-js {
   background: #fade34;
+  color: #666;
 }
 
 .post-images {
@@ -174,7 +178,8 @@ h3 {
   font-size: 80%;
 }
 
-.footer .pure-menu a:hover, .footer .pure-menu a:focus {
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
   background: none;
 }
 
@@ -202,7 +207,8 @@ h3 {
   border-radius: 50%;
 }
 
-.fab, .fas {
+.fab,
+.fas {
   font-size: 30px;
   margin: 8px 10px;
 }
