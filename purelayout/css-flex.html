@@ -4,18 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    		<script src="https://kit.fontawesome.com/bacc61c073.js"></script>
+
+    <title>Css Flex</title>
 </head>
 <style>
     * {
         margin: 0px;
         padding: 0px;
     }
+.top {
+			width: 100%;
+			background-color: #666;
+            opacity: .8;
+            position:fixed;
+            top:0;
+            padding:2px 0;
+            text-align: right;
+		}
 
+		.top a {
+			text-decoration: none;
+            color:#fff;
+            margin:0 5px;
+		}
+		.fab,
+		.fas {
+			font-size: 28px;
+		}
     .header {
         display: flex;
         background: #333;
         padding: 6px 10px;
+        margin-top:32px;
     }
 
     .header .logo {
@@ -180,11 +201,25 @@
         background-color: #666;
         padding: 10px 0;
         text-align: center;
-        color: bisque;
+        color: #eee;
     }
 
 </style>
 <body>
+    <div class="top">
+        <a href="../purelayout/index.html" class="text-white">
+				<i class="fas fa-home"></i>
+			</a>
+			<a href="../purelayout/index.html" class="text-white">
+				<i class="fab fa-github"></i>
+			</a>
+			<a href="#" class="text-white">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="#" class="text-white">
+				<i class="fab fa-facebook-square"></i>
+			</a>
+    </div>
      <div class="header">
         <a href="#" class="logo"><img src="https://picsum.photos/50/50?random" alt="mybasic_page"></a>
         <nav>

@@ -1,260 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Array filter</title>
-</head>
-<style>
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-html, body{
-    width: 100%;
-    height: 100%;
-    font-family: "Microsoft JhengHei","Heiti TC","sans-serif";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
-    background-size: cover;
-    background-position: 50% 0%;
-}
-li{
-    list-style-type: none;
-}
-#app{
-    width: 600px;
-}
-#app > ul.tit{
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-}
-#app > ul.tit > li{
-    width: 25%;
-    line-height: 30px;
-    float: left;
-    color: #000;
-    text-align: center;
-    border: 1px solid #fff;
-}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://kit.fontawesome.com/bacc61c073.js"></script>
 
-ul.tit2{
-    width: 100%;
-    overflow: hidden;
-    background-color: rgba(256, 256, 256, 0.6);
-}
-ul.tit2 > li{
-    width: 25%;
-    line-height: 30px;
-    float: left;
-    color: #000;
-    text-align: center;
-    border: 1px solid #fff;
-    font-size: 12px;
-}
-ul.tit_select{
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-ul.tit_select > li{
-    display: block;
-    width: 25%;
-    height: 30px;
-    line-height: 30px;
-    float: left;
-    color: #000;
-    text-align: center;
-    font-size: 12px;
-}
-ul.tit_select > li > select{
-    display: block;
-    width: 90%;
-    height: 100%;
-    border: 0;
-    margin: 0 auto;
-}
+		<title>Array filter</title>
+	</head>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			font-family: 'Microsoft JhengHei', 'Heiti TC', 'sans-serif';
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+			background-size: cover;
+			background-position: 50% 0%;
+		}
+		li {
+			list-style: none;
+		}
+        .top {
+			width: 100%;
+			background-color: #333;
+            opacity: .8;
+            position:fixed;
+            top:0;
+            padding:2px 10px;
+            text-align: right;
+		}
 
-</style>
-<body>
-     <div id="app">
+		.top a {
+			text-decoration: none;
+            color:#fff;
+            margin:0 5px;
+		}
+		.fab,
+		.fas {
+			font-size: 28px;
+		}
+		#app {
+			width: 600px;
+		}
+		#app > ul.tit {
+			width: 100%;
+			overflow: hidden;
+			background-color: #fff;
+		}
+		#app > ul.tit > li {
+			width: 25%;
+			line-height: 30px;
+			float: left;
+			color: #000;
+			text-align: center;
+			border: 1px solid #fff;
+		}
 
-        <ul class="tit_select">
-            <li></li>
-            <li>
-                <select id="user_money">
-                    <option value="0">選擇錢</option>
-                    <option value="300">大於300</option>
-                    <option value="700">大於700</option>
-                    <option value="10000">大於10000</option>
-                </select>
-            </li>
-            <li>
-                <select id="user_age">
-                    <option value="0">選擇年齡</option>
-                    <option value="10">10歲以上</option>
-                    <option value="20">20歲以上</option>
-                    <option value="30">30歲以上</option>
-                </select>
-            </li>
-            <li>
-                <select id="user_sex">
-                    <option value="no">選擇性別</option>
-                    <option value="boy">boy</option>
-                    <option value="girl">girl</option>
-                </select>
-            </li>
-        </ul>
-        <ul class="tit">
-            <li>名字</li>
-            <li>戶頭錢</li>
-            <li>年齡</li>
-            <li>性別</li>
-        </ul>
-        <div class="itemList">
-            <!-- <ul class="tit2">
+		ul.tit2 {
+			width: 100%;
+			overflow: hidden;
+			background-color: rgba(256, 256, 256, 0.6);
+		}
+		ul.tit2 > li {
+			width: 25%;
+			line-height: 30px;
+			float: left;
+			color: #000;
+			text-align: center;
+			border: 1px solid #fff;
+			font-size: 12px;
+		}
+		ul.tit_select {
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 50px;
+		}
+		ul.tit_select > li {
+			display: block;
+			width: 25%;
+			height: 30px;
+			line-height: 30px;
+			float: left;
+			color: #000;
+			text-align: center;
+			font-size: 12px;
+		}
+		ul.tit_select > li > select {
+			display: block;
+			width: 90%;
+			height: 100%;
+			border: 0;
+			margin: 0 auto;
+		}
+	</style>
+	<body>
+        <div class="top">
+				<a href="../purelayout/index.html" class="text-white">
+					<i class="fas fa-home"></i>
+				</a>
+				<a href=".../purelayout/index.html" class="text-white">
+					<i class="fab fa-github"></i>
+				</a>
+				<a href="#" class="text-white">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="#" class="text-white">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+			</div>
+		<div class="wrap">
+			
+			<div id="app">
+				<ul class="tit_select">
+					<li></li>
+					<li>
+						<select id="user_money">
+							<option value="0">選擇錢</option>
+							<option value="300">大於300</option>
+							<option value="700">大於700</option>
+							<option value="10000">大於10000</option>
+						</select>
+					</li>
+					<li>
+						<select id="user_age">
+							<option value="0">選擇年齡</option>
+							<option value="10">10歲以上</option>
+							<option value="20">20歲以上</option>
+							<option value="30">30歲以上</option>
+						</select>
+					</li>
+					<li>
+						<select id="user_sex">
+							<option value="no">選擇性別</option>
+							<option value="boy">boy</option>
+							<option value="girl">girl</option>
+						</select>
+					</li>
+				</ul>
+				<ul class="tit">
+					<li>名字</li>
+					<li>戶頭錢</li>
+					<li>年齡</li>
+					<li>性別</li>
+				</ul>
+				<div class="itemList">
+					<!-- <ul class="tit2">
                 <li>小豬</li>
                 <li>12000</li>
                 <li>12</li>
                 <li>boy</li>
             </ul> -->
-        </div>
-    </div>
-</body>
-<script>
-var data = [
-    {
-        idx: 1,
-        name: "小豬",
-        money: 12000,
-        age: 12,
-        sex: "boy"
-    },
-    {
-        idx: 2,
-        name: "小烏龜",
-        money: 52000,
-        age: 20,
-        sex: "girl"
-    },
-    {
-        idx: 3,
-        name: "小鳥",
-        money: 150,
-        age: 16,
-        sex: "boy"
-    },
-    {
-        idx: 4,
-        name: "小貓",
-        money: 360000,
-        age: 35,
-        sex: "boy"
-    },
-    {
-        idx: 5,
-        name: "小狗",
-        money: 650,
-        age: 19,
-        sex: "boy"
-    },
-    {
-        idx: 6,
-        name: "鱷魚",
-        money: 9999,
-        age: 40,
-        sex: "girl"
-    },
-    {
-        idx: 7,
-        name: "龍蝦",
-        money: 10,
-        age: 2,
-        sex: "girl"
-    },
-    {
-        idx: 8,
-        name: "海藻",
-        money: 500,
-        age: 30,
-        sex: "boy"
-    }
-]
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var data = [
+			{
+				idx: 1,
+				name: '小豬',
+				money: 12000,
+				age: 12,
+				sex: 'boy',
+			},
+			{
+				idx: 2,
+				name: '小烏龜',
+				money: 52000,
+				age: 20,
+				sex: 'girl',
+			},
+			{
+				idx: 3,
+				name: '小鳥',
+				money: 150,
+				age: 16,
+				sex: 'boy',
+			},
+			{
+				idx: 4,
+				name: '小貓',
+				money: 360000,
+				age: 35,
+				sex: 'boy',
+			},
+			{
+				idx: 5,
+				name: '小狗',
+				money: 650,
+				age: 19,
+				sex: 'boy',
+			},
+			{
+				idx: 6,
+				name: '鱷魚',
+				money: 9999,
+				age: 40,
+				sex: 'girl',
+			},
+			{
+				idx: 7,
+				name: '龍蝦',
+				money: 10,
+				age: 2,
+				sex: 'girl',
+			},
+			{
+				idx: 8,
+				name: '海藻',
+				money: 500,
+				age: 30,
+				sex: 'boy',
+			},
+		];
 
-  var newData = data;
-        var itemList = document.getElementsByClassName("itemList")[0];
-        const user_money = document.getElementById('user_money');
-        const user_age = document.getElementById('user_age');
-        const user_sex = document.getElementById('user_sex');
+		var newData = data;
+		var itemList = document.getElementsByClassName('itemList')[0];
+		const user_money = document.getElementById('user_money');
+		const user_age = document.getElementById('user_age');
+		const user_sex = document.getElementById('user_sex');
 
-        function Dom(arr){
-            var html = "";
+		function Dom(arr) {
+			var html = '';
 
-            arr.forEach((item => {
-                html +='<ul class="tit2">'
-                html +='<li>' +item.name+'</li>'
-                html+='<li>' +item.money+'</li>'
-                html +='<li>' +item.age+'</li>'
-                html +='<li>' +item.sex+'</li>'
-                html +='</ul>'
-            }))
+			arr.forEach(item => {
+				html += '<ul class="tit2">';
+				html += '<li>' + item.name + '</li>';
+				html += '<li>' + item.money + '</li>';
+				html += '<li>' + item.age + '</li>';
+				html += '<li>' + item.sex + '</li>';
+				html += '</ul>';
+			});
 
-            itemList.innerHTML=html;
-        }
-        
-        function userMoney(value){
-            const arr=[];
-            newData.forEach(item => {
-                if(item.money > user_money.value){
-                    arr.push(item);
-                }
-                // console.log(item);
-                });
-            Dom(arr);
-        }
+			itemList.innerHTML = html;
+		}
 
-        function userAge(value){
-            const arr=[];
-            newData.forEach(item => {
-            if(item.age > user_age.value){
-            arr.push(item);
-            }
-            // console.log(item);
-            });
-            Dom(arr);
-        }
+		function userMoney(value) {
+			const arr = [];
+			newData.forEach(item => {
+				if (item.money > user_money.value) {
+					arr.push(item);
+				}
+				// console.log(item);
+			});
+			Dom(arr);
+		}
 
-        function userSex(value){
-            const arr=[];
-            newData.forEach(item => {
-            if(item.sex === value){
-                arr.push(item);
-            }
-            if(value === 'no'){
-                arr.push(item)
-            }
-            // console.log(item);
-            });
-            Dom(arr);
-        }
-        user_money.addEventListener('change',function(){
-            userMoney(this.value)
-        })
+		function userAge(value) {
+			const arr = [];
+			newData.forEach(item => {
+				if (item.age > user_age.value) {
+					arr.push(item);
+				}
+				// console.log(item);
+			});
+			Dom(arr);
+		}
 
-        user_age.addEventListener('change',function(){
-            userAge(this.value)
-        })
+		function userSex(value) {
+			const arr = [];
+			newData.forEach(item => {
+				if (item.sex === value) {
+					arr.push(item);
+				}
+				if (value === 'no') {
+					arr.push(item);
+				}
+				// console.log(item);
+			});
+			Dom(arr);
+		}
+		user_money.addEventListener('change', function() {
+			userMoney(this.value);
+		});
 
-        user_sex.addEventListener('change',function(){
-            userSex(this.value)
-        })
+		user_age.addEventListener('change', function() {
+			userAge(this.value);
+		});
 
+		user_sex.addEventListener('change', function() {
+			userSex(this.value);
+		});
 
-        Dom(newData);
-</script>
+		Dom(newData);
+	</script>
 </html>

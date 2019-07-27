@@ -1,18 +1,18 @@
 const footer = `<div class="pure-menu pure-menu-horizontal">
               <ul>
                 <li class="pure-menu-item">
-                  <a href="http://purecss.io/" class="pure-menu-link">About</a>
+                  <a href="about.html" class="pure-menu-link">About</a>
                 </li>
                 <li class="pure-menu-item">
                   <a
-                    href="http://twitter.com/yuilibrary/"
+                    href="##"
                     class="pure-menu-link"
-                    >Twitter</a
+                    >Facebook</a
                   >
                 </li>
                 <li class="pure-menu-item">
                   <a
-                    href="http://github.com/pure-css/pure/"
+                    href="index.html"
                     class="pure-menu-link"
                     >GitHub</a
                   >
