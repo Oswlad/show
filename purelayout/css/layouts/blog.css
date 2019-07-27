@@ -109,6 +109,7 @@ h3 {
   font-size: 2em;
   color: #222;
   margin-bottom: 0.2em;
+  text-align:left;
 }
 
 .post-avatar {
@@ -121,7 +122,7 @@ h3 {
   font-family: Georgia, 'Cambria', serif;
   color: #444;
   line-height: 1.8em;
-  text-align:center;
+
 }
 
 .post-meta {
