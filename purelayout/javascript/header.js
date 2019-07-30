@@ -9,7 +9,7 @@ const header = `<h1 class="brand-title">
 </h1>
 <h2 class="brand-tagline">
   <span>前端攻城獅。</span
-  ><span>學習╳筆記╳旅行</span><span> 旅行，是為了成為更好的自己...</span>
+  ><span>學習✖筆記✖旅行</span><span>✖筆記小角落✖</span>
 </h2>
 <nav class="nav">
   <ul class="nav-list">
