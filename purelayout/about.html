@@ -1,105 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A layout example that shows off a blog page with a list of posts."
-    />
-    <script src="https://kit.fontawesome.com/bacc61c073.js"></script>
-    <title>Oswald &ndash; simple &ndash; life</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
-      integrity="sha384-"
-      crossorigin="anonymous"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A layout example that shows off a blog page with a list of posts."
+		/>
+		<script src="https://kit.fontawesome.com/bacc61c073.js"></script>
+		<title>Oswald &ndash; simple &ndash; life</title>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+			integrity="sha384-"
+			crossorigin="anonymous"
+		/>
 
-    <!--[if lte IE 8]>
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css"
-      />
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css"
-    />
-    <!--<![endif]-->
+		<!--[if lte IE 8]>
+			<link
+				rel="stylesheet"
+				href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css"
+			/>
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />
+		<!--<![endif]-->
 
-    <!--[if lte IE 8]>
-      <link rel="stylesheet" href="css/layouts/blog-old-ie.css" />
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/layouts/blog.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap"
-      rel="stylesheet"
-    />
-    <!--<![endif]-->
-  </head>
-  <style>
-    .post-description {
-      text-align: center;
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="css/layouts/blog-old-ie.css" />
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="css/layouts/blog.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap"
+			rel="stylesheet"
+		/>
+		<!--<![endif]-->
+	</head>
+	<style>
+		.post-description {
+			text-align: center;
     }
-  </style>
-  <body>
-    <div id="layout" class="pure-g">
-      <div class="sidebar pure-u-1 pure-u-md-1-4">
-        <div class="header"><script src="javascript/header.js"></script></div>
-      </div>
+    
+    .post img {
+      width:200px;
+      height:200px;
+      border-radius: 50%;
+    }
+	</style>
+	<body>
+		<div id="layout" class="pure-g">
+			<div class="sidebar pure-u-1 pure-u-md-1-4">
+				<div class="header"><script src="javascript/header.js"></script></div>
+			</div>
 
-      <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-          <!-- A wrapper for all the blog posts -->
-          <div class="post">
-            <h1 class="content-subhead">About me...</h1>
+			<div class="content pure-u-1 pure-u-md-3-4">
+				<div>
+					<!-- A wrapper for all the blog posts -->
+					<div class="post">
+						<h1 class="content-subhead">About me...</h1>
 
-            <!-- A single blog post -->
-            <section class="post">
-              <header>
-                <img src="../img/40.jpg" alt="" />
-                <h2 class="post-title">Oswald</h2>
-              </header>
+						<!-- A single blog post -->
+						<section class="post">
+							<div>
+								<img src="../img/40.jpg" alt="" />
+							</div>
 
-              <div class="post-description">
-                <p>喜歡到處旅行，喜歡跟不同國家的人互相交流，了解不同文化。</p>
-              </div>
-              <div class="skill">
-                <ul>
-                  <li>
-                    <i class="fab fa-html5" style="color:#ea6228"></i>HTML 5
-                  </li>
-                  <li>
-                    <i class="fab fa-css3-alt" style="color:#146fb1"></i>CSS
-                    CSS3
-                  </li>
-                  <li>
-                    <i class="fab fa-js-square" style="color:#f9d448"></i
-                    >JavaScript
-                  </li>
-                  <li><i class="fab fa-php" style="color:#7478ae"></i>PHP</li>
-                  <li>
-                    <i class="fas fa-database" style="color:#e43129"></i>SQL
-                  </li>
-                  <li><i class="fas fa-database"></i>mySQL</li>
-                  <li><i class="fab fa-github"></i>github</li>
-                  <li>
-                    <i class="fab fa-bootstrap" style="color:#6d42a0"></i
-                    >Bootstrap
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </div>
+							<h2 class="post-title">Oswald</h2>
 
-          <div class="footer">
-            <script src="javascript/footer.js"></script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+							<div class="post-description">
+								<p>喜歡到處旅行，喜歡跟不同國家的人互相交流，了解不同文化。</p>
+							</div>
+							<div class="skill">
+								<ul>
+									<li><i class="fab fa-html5" style="color:#ea6228"></i>HTML 5</li>
+									<li><i class="fab fa-css3-alt" style="color:#146fb1"></i>CSS CSS3</li>
+									<li><i class="fab fa-js-square" style="color:#f9d448"></i>JavaScript</li>
+									<li><i class="fab fa-php" style="color:#7478ae"></i>PHP</li>
+									<li><i class="fas fa-database" style="color:#e43129"></i>SQL</li>
+									<li><i class="fas fa-database"></i>mySQL</li>
+									<li><i class="fab fa-github"></i>github</li>
+									<li><i class="fab fa-bootstrap" style="color:#6d42a0"></i>Bootstrap</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+
+					<div class="footer">
+						<script src="javascript/footer.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
