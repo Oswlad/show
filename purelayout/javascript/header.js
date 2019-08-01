@@ -19,7 +19,7 @@ const header = `<h1 class="brand-title">
     <li>
       <a href="article-list.html">文章列表</a>
     </li>
-     <li>
+    <li>
       <a href="https://hackmd.io/@Oswald1428">摘要筆記</a>
     </li>
     <li>
