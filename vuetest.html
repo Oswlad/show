@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+<div class="panel panel-default" id="user">
+  <div class="panel-heading">
+    <input class="form-control" v-model="filter" placeholder="請輸入條件"/>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox"/>
+        </th>
+        <th>序號</th>
+        <th>姓名</th>
+        <th>英文姓名</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="user in list | filterBy filter">
+        <td>
+          <input type="checkbox"/>
+        </td>
+        <td v-text="user.auto_id"></td>
+        <td v-text="user.t_name"></td>
+        <td v-text="user.e_name"></td>
+        <td v-text="user.mail_1"></td>
+        <td v-text="user.id"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script>
+var users = new Vue({
+  el: "#user",
+  data: {
+    filter: "",
+    list: [{ "auto_id": "2", "dept": "110001", "id": "20", "t_name": "\u9673\u745e\u715c", "e_name": "Robert Chen", "job": "\u7e3d\u7d93\u7406", "tel": "(03)5973366", "ext": "4104", "mail_1": "robert@icpdas.com", "mail_2": "", "picture": "0001" }, { "auto_id": "3", "dept": "110001", "id": "40", "t_name": "\u9ec3\u570b\u8aa0", "e_name": "Ron Huang", "job": "\u5c08\u6848\u526f\u7e3d\u7d93\u7406 \u66a8 \u7279\u5225\u52a9\u7406", "tel": "(02)29500655", "ext": "6001", "mail_1": "ron_huang@icpdas.com", "mail_2": "", "picture": "0247" }, { "auto_id": "4", "dept": "110001", "id": "10", "t_name": "\u8449\u5efc\u5ef8", "e_name": "Neddy Yeh", "job": "\u8463\u4e8b\u9577", "tel": "(03)5973366", "ext": "7799", "mail_1": "neddy@icpdas.com", "mail_2": "ndyeh@icpdas.com", "picture": "0002" }, { "auto_id": "5", "dept": "110001", "id": "35", "t_name": "\u9ec3\u658c\u92d2", "e_name": "P. F. Huang", "job": "\u526f\u7e3d\u7d93\u7406", "tel": "(03)5973366", "ext": "2000", "mail_1": "pfhuang@idas.com", "mail_2": "", "picture": "0008" }] } });
+
+</script>
+</html>
