@@ -1,3 +1,9 @@
+window.onload = function() {
+  if (!window.applicationCache) {
+    alert('你的瀏覽器不支援HTML5！');
+  }
+};
+
 const header = `<h1 class="brand-title">
   <a href="index.html"
     ><i class="fab fa-digital-ocean" style="margin-right: 2px;"></i>s<i
