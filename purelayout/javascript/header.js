@@ -19,8 +19,8 @@ const header = `<h1 class="brand-title">
     <li>
       <a href="article-list.html">文章列表</a>
     </li>
-     <li>
-      <a href="note-list.html">摘要筆記</a>
+    <li>
+      <a href="https://hackmd.io/@Oswald1428">摘要筆記</a>
     </li>
     <li>
       <a href="pratice-list.html">Try something...</a>
