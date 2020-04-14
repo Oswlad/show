@@ -32,13 +32,27 @@
       clear: both;
     }
 
-    body {
+    body,
+    html {
       /* background-color: #8f96a0; */
       /* background-color: #ccc; */
-      background-image: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80');
+
       width: 100%;
       height: 100%;
       font-size: 0px;
+    }
+
+    .bg {
+      background-image: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1575&q=80');
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+      filter: blur(5px);
     }
 
     .prof {
@@ -48,6 +62,10 @@
       margin: auto;
       margin-top: 120px;
       box-shadow: 10px 5px 8px 10px #8f96a0;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      right: 0;
     }
 
     .pic,
@@ -125,6 +143,18 @@
       text-align: center;
     }
 
+    .fab,
+    .fas {
+      font-size: 30px;
+      margin: 8px 10px;
+    }
+
+    .skill li {
+      list-style: none;
+      display: inline-block;
+      /* border-right: 1px solid orange; */
+    }
+
     @media only screen and (max-width: 600px) {
       .prof {
         width: 92%;
@@ -139,6 +169,7 @@
     }
   </style>
   <body>
+    <div class="bg">aaa</div>
     <div class="wrap">
       <div class="prof">
         <div class="pic">
@@ -159,34 +190,28 @@
             <li>泓格科技 網站開發工程師(2014~至今)</li>
             <li></li>
           </ul>
-          <style>
-            .fab,
-            .fas {
-              font-size: 30px;
-              margin: 8px 10px;
-            }
 
-            .skill li {
-              list-style: none;
-              display: inline-block;
-              /* border-right: 1px solid orange; */
-            }
-          </style>
           <div class="skill">
             <ul>
-              <li><i class="fab fa-html5" style="color:#ea6228"></i>HTML 5</li>
               <li>
-                <i class="fab fa-css3-alt" style="color:#146fb1"></i>CSS CSS3
+                <i class="fab fa-html5" style="color: #ea6228;"></i>HTML 5
               </li>
               <li>
-                <i class="fab fa-js-square" style="color:#f9d448"></i>JavaScript
+                <i class="fab fa-css3-alt" style="color: #146fb1;"></i>CSS CSS3
               </li>
-              <li><i class="fab fa-php" style="color:#7478ae"></i>PHP</li>
-              <li><i class="fas fa-database" style="color:#e43129"></i>SQL</li>
+              <li>
+                <i class="fab fa-js-square" style="color: #f9d448;"></i
+                >JavaScript
+              </li>
+              <li><i class="fab fa-php" style="color: #7478ae;"></i>PHP</li>
+              <li>
+                <i class="fas fa-database" style="color: #e43129;"></i>SQL
+              </li>
               <li><i class="fas fa-database"></i>mySQL</li>
-              <li><i class="fab fa-github"></i>github</li>
+              <!-- <li><i class="fab fa-github"></i>github</li> -->
               <li>
-                <i class="fab fa-bootstrap" style="color:#6d42a0"></i>Bootstrap
+                <i class="fab fa-bootstrap" style="color: #6d42a0;"></i
+                >Bootstrap
               </li>
             </ul>
 
@@ -200,6 +225,22 @@
         </div>
       </div>
       <div class="clearfixed"></div>
+
+      <style>
+        .demo_block {
+          height: 300px;
+          background-color: #eee;
+          margin-top: 120px;
+        }
+      </style>
+
+      <div class="demo_block">
+        <div class="item_1"></div>
+        <div class="item_2"></div>
+      </div>
+      <div class="footer">
+        <div style="margin-top: 10px;">Designed by Oswald</div>
+      </div>
     </div>
   </body>
 </html>
